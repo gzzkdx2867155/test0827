@@ -34,7 +34,7 @@ def build_model():
     #model.add(Embedding(output_dim=(10,3,), input_dim=3, input_length=10))
     
    # model.add(Dropout(0.8))
-    model.add(GRU(300,init='lecun_uniform', input_shape=(10,3), return_sequences=True,activation ='sigmoid'))
+    model.add(GRU(300,init='lecun_uniform', input_shape=(3,3), return_sequences=True,activation ='sigmoid'))
     #model.add(Embedding(output_dim=100,input_dim=300)) 
    # model.add(LSTM(30,init='uniform', return_sequences=True,activation ='sigmoid'))
     #model.add(Dense(8,init='uniform',activation='relu'))
