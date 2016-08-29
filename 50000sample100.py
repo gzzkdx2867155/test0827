@@ -22,6 +22,7 @@ import xlwt
 from keras.optimizers import SGD
 from keras.layers import GRU
 import scipy.io as sio  
+import os
 def build_model():
     """
     build the model by using sequential
@@ -95,5 +96,6 @@ if __name__ == '__main__':
     data2=sio.loadmat('valid10.mat')
     validset=data2['valid']    
     prediction=model.predict(validset)
-    
-    numpy.savetxt('result0827/50000sample100vprediction10to1v1.txt', prediction)
+    result_file = os.path.join(os.getcwd(),'result0827')
+    result_file = os.path.join(result_file,'50000sample100vprediction10to1v1.txt')
+    numpy.savetxt(result_file, prediction) 
