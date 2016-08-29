@@ -93,7 +93,7 @@ if __name__ == '__main__':
     history=hist.history.items()
     mkdir('result0827')
     model.save_weights('result0827/vprediction13to1.h5')
-    data2=sio.loadmat('valid1.mat')
+    data2=sio.loadmat('valid13.mat')
     validset=data2['valid']    
     prediction=model.predict(validset)
     result_file = os.path.join(os.getcwd(),'result0827')
